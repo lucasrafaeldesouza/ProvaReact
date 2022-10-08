@@ -1,4 +1,11 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
+import {
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Typography,
+} from "@mui/material";
 import React, { useEffect, useState } from "react";
 
 const FetchProducts = () => {
@@ -23,15 +30,15 @@ const FetchProducts = () => {
   }, []);
 
   return (
-    <div style={{display:'grid',gridTemplateColumns:"1fr 1fr 1fr", gap: "2rem"}}>
+    <div>
       {isLoading ? (
         <div>Carregando</div>
       ) : (
         data.map((produto) => (
-          <Card 
-            sx={{ maxWidth: 345 }} 
+          <Card
+            sx={{ maxWidth: 345 }}
             key={produto.id}
-            style={{marginBottom: "2rem"}}
+            style={{ marginBottom: "2rem" }}
           >
             <CardMedia
               component="img"
