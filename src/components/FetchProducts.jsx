@@ -36,7 +36,15 @@ const FetchProducts = () => {
         <div>Carregando</div>
       ) : (
         data.map((produto) => (
-          <Grid item xs={12} md={4} lg={1} display="flex" alignItems="stretch">
+          <Grid
+            item
+            sx={6}
+            xs={12}
+            md={4}
+            lg={1}
+            display="flex"
+            alignItems="stretch"
+          >
             <Card
               key={produto.id}
               style={{
@@ -44,7 +52,7 @@ const FetchProducts = () => {
                 display: "flex",
                 alignItems: "stretch",
                 flexDirection: "column",
-                justifyContent: "space-between"
+                justifyContent: "space-between",
               }}
             >
               <CardMedia
@@ -53,7 +61,7 @@ const FetchProducts = () => {
                 image={produto.thumbnail}
                 alt={produto.brand}
               />
-              <CardContent style={{display:"flex", flex:"1 1 auto"}}>
+              <CardContent style={{ display: "flex", flexGrow: 1 }}>
                 <Typography gutterBottom variant="h5" component="div">
                   {produto.title}
                 </Typography>
