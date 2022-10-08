@@ -4,6 +4,7 @@ import {
   CardActions,
   CardContent,
   CardMedia,
+  Grid,
   Typography,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
@@ -30,38 +31,45 @@ const FetchProducts = () => {
   }, []);
 
   return (
-    <div>
+    <Grid container spacing={2} xs={12}>
       {isLoading ? (
         <div>Carregando</div>
       ) : (
         data.map((produto) => (
-          <Card
-            sx={{ maxWidth: 345 }}
-            key={produto.id}
-            style={{ marginBottom: "2rem" }}
-          >
-            <CardMedia
-              component="img"
-              height="140"
-              image={produto.thumbnail}
-              alt={product.brand}
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                {produto.title}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                {produto.description}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small">Compartilhar</Button>
-              <Button size="small">Conheça mais</Button>
-            </CardActions>
-          </Card>
+          <Grid item xs={12} md={4} lg={1} display="flex" alignItems="stretch">
+            <Card
+              key={produto.id}
+              style={{
+                height: "100%",
+                display: "flex",
+                alignItems: "stretch",
+                flexDirection: "column",
+                justifyContent: "space-between"
+              }}
+            >
+              <CardMedia
+                component="img"
+                height="140"
+                image={produto.thumbnail}
+                alt={produto.brand}
+              />
+              <CardContent style={{display:"flex", flex:"1 1 auto"}}>
+                <Typography gutterBottom variant="h5" component="div">
+                  {produto.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {produto.description}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">Compartilhar</Button>
+                <Button size="small">Conheça mais</Button>
+              </CardActions>
+            </Card>
+          </Grid>
         ))
       )}
-    </div>
+    </Grid>
   );
 };
 
