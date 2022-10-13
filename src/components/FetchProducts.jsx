@@ -38,10 +38,10 @@ const FetchProducts = () => {
         data.map((produto) => (
           <Grid
             item
-            sx={6}
-            xs={12}
+            sx={2}
+            xs={2}
             md={4}
-            lg={1}
+            lg={4}
             display="flex"
             alignItems="stretch"
           >
