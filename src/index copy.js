@@ -1,23 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route } from 'react-router-dom';
 import ErrorPage from './components/ErrorPage';
 import FetchNews from './components/FetchNews';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
 import Root from './routes/root';
-import Contador from './components/Contator';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Root />} errorElement={<ErrorPage />}>
-          <Route path="noticias" element={<FetchNews />} />
-          <Route path="contador" element={<Contador />} />
-        </Route>
-      </Routes>
+      <Route path='/' element={<Root />} errorElement={<ErrorPage />}>
+        <Route path='noticias' element={<FetchNews />}></Route>
+        <Route path='sobre' element={<FetchNews />}></Route>
+      </Route>
     </BrowserRouter>
   </React.StrictMode>
 );
