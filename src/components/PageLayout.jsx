@@ -1,14 +1,13 @@
-import { Grid } from '@mui/material';
-import { Outlet } from 'react-router-dom';
-import Root from '../routes/root';
- 
+import { Link, Outlet } from "react-router-dom";
+
 export const PageLayout = () => (
-  <Grid container>
-    <Grid item md={4}>
-      <Root />
-    </Grid>    
-    <Grid item md={8}>
+    <>
+      <nav>
+        <Link to={'/'}>Home</Link>
+        <Link to={'/sobre'}>Sobre</Link>
+        <Link to={'/noticias'}>Notícias</Link>
+        <Link to={'/contato'}>Contato</Link>
+      </nav>
       <Outlet />
-    </Grid>     
-  </Grid>
+    </>  
 );
