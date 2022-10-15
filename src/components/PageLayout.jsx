@@ -48,7 +48,7 @@ export const PageLayout = () => {
     const [aberto, setAberto] = useState(false);
 
     const lideComOMenu = () => {
-      setAberto(!aberto);
+      setAberto(!aberto); 
     };
 
     return (
