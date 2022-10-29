@@ -15,6 +15,7 @@ import { Link, Outlet } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 
+
 export const PageLayout = () => {
   const DrawerApp = () => (
     <Box style={{ minWidth: "260px" }}>
@@ -38,6 +39,11 @@ export const PageLayout = () => {
         <ListItem>
           <ListItemButton>
             <ListItemText primary={"Contato"} component="a" href="/contato" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton>
+            <ListItemText primary={"Login"} component="a" href="/login" />
           </ListItemButton>
         </ListItem>
       </List>

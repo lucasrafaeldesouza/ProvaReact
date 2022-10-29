@@ -16,6 +16,7 @@ const route = createBrowserRouter(
       <Route index path="sobre" element={<Contador />} />
       <Route path="noticias" element={<FetchNews />} />
       <Route path="contato" element={<Contador />} />
+      <Route path="login" element={<Contador />} />
     </Route>
   )
 );
