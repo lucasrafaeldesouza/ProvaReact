@@ -27,30 +27,14 @@ const Contador = () => {
 
   return (
     <div>
-      <div>Olá Contador</div>
-      <div>Meu mês de aniversário é: {contador} </div>
+      <div>Quem somos?</div>
       <div>
-        {
-          /* Renderização condicional*/
-          contadorAux && <Alert severity="error">{mensagem}</Alert>
-        }
-
-        <Button onClick={zerarMes}>Zera tudo!</Button>
-        <Button onClick={multiMes}>Multiplica mês!</Button>
-        <Button
-          onClick={() => {
-            setContador(contador + 1);
-          }}
-        >
-          Aumentar um mês
-        </Button>
-        <Button
-          onClick={() => {
-            setContador(contador - 1);
-          }}
-        >
-          Diminuir um mês
-        </Button>
+        A Forge é uma empresa especializada em Soluções de Sistemas e
+        Consultoria para a área Comercial. Com soluções dinâmicas e práticas,
+        tem como objetivo aproximar a empresa de seus clientes, atuando com
+        soluções de gestão da área comercial e melhorias nos processos. Nossa
+        Missão é dinamizar os processos de nossos clientes, criando uma área
+        comercial mais presente e atuante.
       </div>
     </div>
   );
