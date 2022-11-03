@@ -27,15 +27,14 @@ const Contador = () => {
 
   return (
     <div>
-      <div>Quem somos?</div>
       <div>
-        A Forge é uma empresa especializada em Soluções de Sistemas e
-        Consultoria para a área Comercial. Com soluções dinâmicas e práticas,
-        tem como objetivo aproximar a empresa de seus clientes, atuando com
-        soluções de gestão da área comercial e melhorias nos processos. Nossa
-        Missão é dinamizar os processos de nossos clientes, criando uma área
-        comercial mais presente e atuante.
+        <h1>Seja bem vindo</h1>
+        <h3>Forge Soluções Digitais</h3>
       </div>
+      <div>
+        
+      </div>
+      <img src="https://forgesolucoes.com.br/img/forge.png" alt="" />
     </div>
   );
 };

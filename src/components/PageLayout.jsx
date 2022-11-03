@@ -43,7 +43,7 @@ export const PageLayout = () => {
         </ListItem>
         <ListItem>
           <ListItemButton>
-            <ListItemText primary={"Login"} component="a" href="/login" />
+            <ListItemText primary={"Album"} component="a" href="/album" />
           </ListItemButton>
         </ListItem>
       </List>
