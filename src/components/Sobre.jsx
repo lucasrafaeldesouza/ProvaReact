@@ -1,4 +1,4 @@
-import { Alert, Button } from "@mui/material";
+import { Alert, Button, Grid } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
 const Contador = () => {
@@ -6,26 +6,10 @@ const Contador = () => {
   const [contadorAux, setContadorAux] = useState(false);
   const [mensagem, setMensagem] = useState("");
 
-  const multiMes = () => {
-    setContador(contador * contador);
-  };
-
-  const zerarMes = () => {
-    setContador(0);
-  };
-
-  useEffect(() => {
-    if (contador > 12) {
-      setContadorAux(true);
-      setMensagem("O ano possui apenas 12 meses");
-    } else {
-      setContadorAux(false);
-    }
-  }, [contador]);
-
   useEffect(() => {}, [contadorAux]);
 
   return (
+    <Grid container style={{ maxWidth: "800px", margin: "0 auto" }}>
     <div>
       <div>
         <h1>Quem somos?</h1>
@@ -38,8 +22,9 @@ const Contador = () => {
         Missão é dinamizar os processos de nossos clientes, criando uma área
         comercial mais presente e atuante.
       </div>
-      <img src="https://lh3.googleusercontent.com/p/AF1QipMAVye_4uWIpjHeK8PFY8Ka4lfqErBxd9y4H8E=w1080-h608-p-no-v0" alt="" />
+      <img class="forge" src="https://forgesolucoes.com.br/img/quemsomos.png" alt="" />
     </div>
+    </Grid>
   );
 };
 

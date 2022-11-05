@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+
+h1{
+  font-family: sans-serif;
+  text-align: center;
+}
+
+img{
+  width: 250px;
+  margin-top: 100px;
+}
+.forge{
+  text-align: center;
+  width: 800px;
+  height: 400px;
+}
+
+body{
+  background-color: black;
+  color: white;
+}

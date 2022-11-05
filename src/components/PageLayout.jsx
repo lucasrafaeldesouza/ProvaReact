@@ -18,7 +18,7 @@ import { useState } from "react";
 
 export const PageLayout = () => {
   const DrawerApp = () => (
-    <Box style={{ minWidth: "260px" }}>
+    <Box style={{ minWidth: "260px"}}>
       <Typography variant="h5">Meu menu</Typography>
       <List>
         <ListItem>
@@ -37,13 +37,13 @@ export const PageLayout = () => {
           </ListItemButton>
         </ListItem>
         <ListItem>
-          <ListItemButton>
-            <ListItemText primary={"Contato"} component="a" href="/contato" />
+          <ListItemButton component="a" href="/contato">
+            <ListItemText primary={"Contato"}/>
           </ListItemButton>
         </ListItem>
         <ListItem>
-          <ListItemButton>
-            <ListItemText primary={"Album"} component="a" href="/album" />
+          <ListItemButton  component="a" href="/album">
+            <ListItemText primary={"Album"}/>
           </ListItemButton>
         </ListItem>
       </List>
@@ -81,7 +81,7 @@ export const PageLayout = () => {
   return (
     <>
       <ContainerMenu />
-      <Box style={{ marginTop: "80px" }}>
+      <Box style={{ marginTop: "80px"}}>
         <Outlet />
       </Box>
     </>

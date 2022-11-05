@@ -9,7 +9,9 @@ import Sobre from "../components/Sobre";
 import ErrorPage from "../components/ErrorPage";
 import FetchNews from "../components/FetchNews";
 import { PageLayout } from "../components/PageLayout";
-import Home from "../components/Home"
+import Home from "../components/Home";
+import Album from "../components/Album";
+import Contato from "../components/Contato"
 
 const route = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +20,7 @@ const route = createBrowserRouter(
       <Route path="/sobre" element={<Sobre />} />
       <Route path="/noticias" element={<FetchNews />} />
       <Route path="/album" element={<Album />} />
+      <Route path="/contato" element={<Contato />} />
       {/* {<Route path="/contato" element={<Contador />} />} */}
       {/* { <Route path="/album" element={<Contador />} />} */}
     </Route>

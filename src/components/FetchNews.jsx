@@ -18,7 +18,7 @@ const FetchNews = () => {
 
   return (
     <div style={{ maxWidth: "70rem", margin: "0 auto" }}>
-      <h1>Notícias</h1>
+      <h1>Vagas de deselvolvimento</h1>
       {isLoading ? (
         <CircularProgress />
       ) : (
@@ -34,8 +34,10 @@ const FetchNews = () => {
             key={noticia.id}
           >
             <div>
-              <h2>{noticia.title}</h2>
-              <div>{noticia.body}</div>
+              
+              {/* <div>{noticia.body}</div> */}
+              <p>Vaga de estágio</p>
+              <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxhP5QnFc0bgsBd11Ujx8guHTHUdlkXqP9VVr0CgHGUUphi-ajNCFiyEz4ZPKRBST0btA&usqp=CAU" alt="" /></div>
             </div>
           </Card>
         ))
